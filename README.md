@@ -1,86 +1,80 @@
-# Spring Boot portfolio
+# Spring Boot & Enterprise Java Laboratory Portfolio
 
-This portfolio contains a comprehensive collection of Spring Boot and Java
-projects, ranging from core fundamentals to complex enterprise-grade systems.
-These projects demonstrate proficiency in Inversion of Control (IoC),
-Dependency Injection (DI), JPA persistence, Spring Security, and modern
-full-stack integration.
+This repository hosts practical implementations, software architecture patterns,
+and full-stack enterprise systems developed for the Spring Boot and Java Enterprise
+curriculum at Mundiapolis University.
 
-## Learning progression
+---
 
-The portfolio follows a structured roadmap from basic Java concepts to
-advanced full-stack architectures.
+## Laboratory & Project Overview
 
-- **Fundamentals:** Deep dive into IoC and DI patterns.
-- **Persistence:** Implementation of ORM mapping using Hibernate and Spring
-  Data JPA.
-- **Security:** Exploration of RBAC, JWT, and OAuth2 for secure
-  authentication.
-- **Web MVC:** Development of server-side rendered applications using
-  Thymeleaf.
-- **Full-stack:** Integration of REST APIs with modern frontend frameworks
-  like Angular.
+| Stage | Module | Core Methodology | Primary Deliverables | Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| **01. Fundamentals** | **[java-ioc-di-lab](./01-fundamentals/java-ioc-di-lab)** | Inversion of Control (IoC), Dependency Injection (DI), XML vs Component Scan | Loose coupling architecture | [Lab](./01-fundamentals/java-ioc-di-lab/README.md) |
+| **02. Persistence** | **[spring-data-jpa-lab](./02-persistence-jpa/spring-data-jpa-lab)** | Spring Data JPA, Hibernate ORM, repositories, auto-DDL schema generation | Entity relational mapping | [Lab](./02-persistence-jpa/spring-data-jpa-lab/README.md) |
+| **02. Persistence** | **[spring-jpa-hospital-management](./02-persistence-jpa/spring-jpa-hospital-management)** | Clinical data modeling, complex bidirectional relationships, cascading rules | Healthcare management system | [Lab](./02-persistence-jpa/spring-jpa-hospital-management/README.md) |
+| **03. Security** | **[spring-jpa-security-auth-lab](./03-security-auth/spring-jpa-security-auth-lab)** | Spring Security, User-Role RBAC, PasswordEncoder, custom UserDetailsService | Authentication & Authz tier | [Lab](./03-security-auth/spring-jpa-security-auth-lab/README.md) |
+| **04. Web MVC** | **[mvc-security-jpa-lab](./04-web-mvc/mvc-security-jpa-lab)** | Server-side MVC architecture, Thymeleaf templates, session security, form validation | Medical consultation web app | [Lab](./04-web-mvc/mvc-security-jpa-lab/README.md) |
+| **05. Full-Stack** | **[angular-spring-lab](./05-fullstack-systems/angular-spring-lab)** | Decoupled Spring Boot 3 REST API + Angular 17 SPA, HttpClient, CORS | Product catalog management | [System](./05-fullstack-systems/angular-spring-lab/README.md) |
+| **05. Full-Stack** | **[digital-banking-system](./05-fullstack-systems/digital-banking-system)** | Enterprise banking platform, JWT/OAuth2 security, financial ledgers, Angular UI | Full-stack digital bank | [System](./05-fullstack-systems/digital-banking-system/README.md) |
 
-## Repository roadmap
+---
 
-### 01. Fundamentals
+## General Running Instructions
 
-- **[java-ioc-di-lab](./01-fundamentals/java-ioc-di-lab):** Examines Inversion
-  of Control (IoC) and Dependency Injection (DI). It explores the transition
-  from tight coupling to dynamic configuration using Spring Context through XML
-  and annotations.
+### Prerequisites
 
-### 02. Persistence and JPA
+- **Java Development Kit:** JDK 17 or higher
+- **Build Tool:** Apache Maven 3.8+ (or bundled `./mvnw`)
+- **Node.js & npm:** Node.js 18+ (for full-stack Angular modules)
+- **Database:** In-memory H2 / MySQL 8.0
 
-- **[spring-data-jpa-lab](./02-persistence-jpa/spring-data-jpa-lab):**
-  Introduces Spring Data JPA and Hibernate, covering entity mapping,
-  repository patterns, and automated schema generation.
-- **[spring-jpa-hospital-management](./02-persistence-jpa/spring-jpa-hospital-management):**
-  A practical application of JPA for a hospital management system featuring
-  complex ORM mappings and bidirectional relationships.
+### Setup and Environment
 
-### 03. Security and authentication
+1. **Clone the repository:**
+   ```bash
+   git clone git@github.com:ind4x/spring-boot-portfolio.git
+   cd spring-boot-portfolio
+   ```
 
-- **[spring-jpa-security-auth-lab](./03-security-auth/spring-jpa-security-auth-lab):**
-  Establishes a foundation for Spring Security, demonstrating user-role
-  management with many-to-many relationships and dynamic privilege assignment.
+### Executing Backend Modules
+Navigate into any lab subdirectory and execute via the embedded Maven wrapper:
 
-### 04. Web MVC
+```bash
+cd 02-persistence-jpa/spring-data-jpa-lab
+./mvnw spring-boot:run
+```
 
-- **[mvc-security-jpa-lab](./04-web-mvc/mvc-security-jpa-lab):** A traditional
-  Spring Boot MVC application using Thymeleaf, featuring JDBC/JPA security
-  persistence and form validation.
+Access the H2 database console (when enabled) at `http://localhost:8080/h2-console`.
 
-### 05. Full-stack systems
+### Executing Full-Stack Modules
+For modules with an Angular frontend (e.g., `05-fullstack-systems/digital-banking-system`):
 
-- **[angular-spring-lab](./05-fullstack-systems/angular-spring-lab):**
-  Integrates a Spring Boot 3 REST API with an Angular 17 frontend for product
-  management.
-- **[digital-banking-system](./05-fullstack-systems/digital-banking-system):**
-  A comprehensive enterprise-grade banking solution featuring JWT/OAuth2
-  security, financial transactions, and a rich Angular dashboard.
-
-## Execution instructions
-
-Each subdirectory is an independent Maven project. To execute a specific
-project:
-
-1. Navigate to the project directory:
+1. **Launch Spring Boot Backend:**
    ```bash
    cd 05-fullstack-systems/digital-banking-system/backend
-   ```
-2. Run the Spring Boot application:
-   ```bash
    ./mvnw spring-boot:run
    ```
+2. **Launch Angular Frontend:**
+   ```bash
+   cd 05-fullstack-systems/digital-banking-system/frontend
+   npm install
+   npm start
+   ```
+   Open `http://localhost:4200` in your web browser.
 
-## Port configuration
+---
 
-Most projects use the default port `8080`. To run multiple projects
-simultaneously, update the `server.port` property in the respective
-`application.properties` files.
+## Technology Stack
 
-## Credits
+- **Backend:** Java 17+, Spring Boot 3.x, Spring Data JPA, Spring Security, Hibernate
+- **Frontend:** Angular 17, TypeScript, HTML5/CSS3, Bootstrap
+- **Persistence & DB:** H2 In-Memory Database, MySQL, PostgreSQL
+- **Build & Dependency Management:** Maven (`pom.xml`)
 
-Developed by Youssef Fellah for the Engineering Cycle at Mundiapolis
-University.
+---
+
+## Author
+
+- **Author:** Youssef Fellah ([ind4x_](https://github.com/ind4x))
+- **Institution:** Mundiapolis University, Engineering Cycle

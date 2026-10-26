@@ -83,5 +83,9 @@ mvn compile exec:java -Dexec.mainClass="org.yss.pres.PresDepFaibleClassique"
 mvn compile exec:java -Dexec.mainClass="org.yss.pres.PresSpringAnnotation"
 ```
 
-Authored by Youssef Fellah.
-Developed for the Engineering Cycle - Mundiapolis University.
+---
+
+## Author
+
+- **Author:** Youssef Fellah ([ind4x_](https://github.com/ind4x))
+- **Institution:** Mundiapolis University, Engineering Cycle

@@ -107,7 +107,9 @@ mvn spring-boot:run
 
 The API is available at `http://localhost:8080`.
 
-## Credits
+---
 
-Developed by Youssef Fellah for the Engineering Cycle at Mundiapolis
-University.
+## Author
+
+- **Author:** Youssef Fellah ([ind4x_](https://github.com/ind4x))
+- **Institution:** Mundiapolis University, Engineering Cycle

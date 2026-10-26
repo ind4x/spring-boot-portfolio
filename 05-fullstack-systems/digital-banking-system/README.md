@@ -96,7 +96,9 @@ scalability and security.
    ng serve
    ```
 
-## Credits
+---
 
-Developed by Youssef Fellah for the Engineering Cycle at Mundiapolis
-University.
+## Author
+
+- **Author:** Youssef Fellah ([ind4x_](https://github.com/ind4x))
+- **Institution:** Mundiapolis University, Engineering Cycle

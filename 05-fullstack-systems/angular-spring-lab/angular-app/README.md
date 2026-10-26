@@ -142,7 +142,9 @@ Access the application at `http://localhost:4200/`.
 
 Note: Ensure the backend server is running at `http://localhost:8080`.
 
-## Credits
+---
 
-Developed by Youssef Fellah for the Engineering Cycle at Mundiapolis
-University.
+## Author
+
+- **Author:** Youssef Fellah ([ind4x_](https://github.com/ind4x))
+- **Institution:** Mundiapolis University, Engineering Cycle

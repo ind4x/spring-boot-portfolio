@@ -94,5 +94,9 @@ ng serve
 ```
 *   **Application gateway**: `http://localhost:4200`
 
-Authored by Youssef Fellah.
-Developed for the Engineering Cycle - Mundiapolis University.
+---
+
+## Author
+
+- **Author:** Youssef Fellah ([ind4x_](https://github.com/ind4x))
+- **Institution:** Mundiapolis University, Engineering Cycle

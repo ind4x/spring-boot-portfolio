@@ -107,5 +107,9 @@ with a clear separation of concerns:
     *   **App**: `http://localhost:8080`
     *   **H2 console**: `http://localhost:8080/h2-console`
 
-Authored by Youssef Fellah.
-Developed for the Engineering Cycle - Mundiapolis University.
+---
+
+## Author
+
+- **Author:** Youssef Fellah ([ind4x_](https://github.com/ind4x))
+- **Institution:** Mundiapolis University, Engineering Cycle
